@@ -1,21 +1,55 @@
-# Sign Language Generator
+# SIGN LANGUAGE GENERATOR FROM SPEECH
 
-A Django-based web application that converts text input into sign language representations, aiming to improve accessibility for the hearing-impaired community.
+This project converts audio speech to sign language animations. It uses Django for the web framework, NLTK for natural language processing, and OpenCV for video processing.
 
 ## Features
-- Text to Sign Language conversion
-- Web-based interface
-- Video preview support
 
-## Tech Stack
-- Python
-- Django
-- HTML, CSS, JavaScript
-- SQLite
+- Record audio speech from the user's microphone.
+- Convert the speech to text using Google Speech Recognition.
+- Preprocess the text using NLTK (tokenization, stemming, lemmatization, POS tagging).
+- Detect the tense of the sentence.
+- Remove stop words.
+- Look up the corresponding sign language animations for each word.
+- Play the animations in sequence.
 
-## Setup Instructions
+## Requirements
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/alencalex3/sign-language-generator.git
-cd sign-language-generator
+- Python 3.7 or higher
+- Django 3.0 or higher
+- NLTK 3.5 or higher
+- OpenCV 4.1.0 or higher
+- PyAudio
+- SpeechRecognition
+- Graphviz
+
+## Installation
+
+1. Clone the repository:
+2. Install the requirements:
+3. Download the NLTK data:
+4. Create a superuser account:
+5. Run the development server:
+6. Open your web browser and go to `http://127.0.0.1:8000/`.
+
+## Usage
+
+1. Click on the "Click to Start" button.
+2. Allow the browser to access your microphone.
+3. Speak into the microphone.
+4. The recorded speech will be converted to text and displayed on the screen.
+5. The corresponding sign language animations will be played in sequence.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit pull requests.
+
+## License
+
+This project is licensed under the MIT License.
+
+**Note:**  
+If you encounter an NLTK error related to `punkt` while running the project, run:
+```python
+import nltk
+nltk.download('punkt')
+```
